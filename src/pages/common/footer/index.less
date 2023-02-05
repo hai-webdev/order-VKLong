@@ -1,0 +1,108 @@
+@import "~@/assets/global.less";
+.footer {
+  background-color: #1e1d29;
+  padding-top: 70px;
+  .foot {
+    .logo {
+      display: block;
+      height: 78.75px;
+      margin-bottom: 32px;
+      img {
+        height: 100%;
+      }
+    }
+    .center-layout {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 115px;
+      .company {
+        width: 410px;
+        margin-right: 130px;
+        color: #afafaf;
+        font-size: 18px;
+      }
+      .nav-list {
+        flex: 1;
+        display: flex;
+        align-items: flex-start;
+        .nav-item {
+          width: calc((100% - 84px) / 3);
+          margin-right: 42px;
+          &:last-child {
+            margin-right: 0;
+          }
+          .title {
+            padding-bottom: 15px;
+            margin-bottom: 13px;
+            color: @mainColor;
+            font-size: 20px;
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              width: 100%;
+              height: 1px;
+              background: #4d4b5e;
+            }
+          }
+          dd {
+            color: #c7c6d8;
+            margin-bottom: 11px;
+            font-size: 16px;
+            word-break: break-all;
+            a {
+              color: @mainColor;
+              
+            }
+          }
+        }
+      }
+    }
+    .bottom-layout {
+      padding: 32px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .copyright {
+        color: #7d7d7d;
+        font-size: 12px;
+        line-height: 2.5;
+      }
+      .right-layout {
+        .link {
+          display: flex;
+          align-items: center;
+          a {
+            display: block;
+            color: @mainColor;
+            font-size: 12px;
+            position: relative;
+            margin-right: 10px;
+            padding-right: 10px;
+            &::after {
+              content: "";
+              position: absolute;
+              right: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              height: 12px;
+              width: 1px;
+              background-color: #4d4b5e;
+            }
+            &:last-child {
+              margin-right: 0;
+              padding-left: 0;
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@import "./mobile.less" screen and (max-width:768px);
